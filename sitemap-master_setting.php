@@ -107,7 +107,7 @@ function plugin_setting_view()
 
 
 <div class="form-group">
-<form action="plugin.php?plugin=sitemap&action=setting" method="post">
+<form action="plugin.php?plugin=sitemap&-mamsteraction=setting" method="post">
 	<input type="hidden" name="update" value="1" />
 	<input type="submit" value="更新sitemap" class="submit  btn btn-primary" />
 </div>
