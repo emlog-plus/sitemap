@@ -61,11 +61,11 @@ function plugin_setting_view()
     <label>SITEMAP文件名</label>
      <input size="12" name="sitemap_name" type="text" class="form-control"  value="<?php echo $sitemap_name; ?>" />
 </div>
-<div class="checkbox checkbox-success">
+<div class="form-group">
 <label> 在网站底部显示 </label>		
 <input size="12" name="sitemap_show_footer" type="checkbox" value="1" <?php echo $ex1;?>/> 
 </div>
-<div class="checkbox checkbox-success">	
+<div class="form-group">	
 <label>  最新评论时间作为最后更新时间 </label>	<input size="12" name="sitemap_comment_time" type="checkbox" value="1" <?php echo $ex2;?>/>
 </div>
 </div>
