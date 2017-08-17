@@ -18,7 +18,7 @@ class sitemap {
 	private $data;
 	function __construct() {
 		extract(sitemap_config());
-		$this->db = MySql::getInstance();
+		$this->db = Database::getInstance();
 		$this->path = EMLOG_ROOT . '/' . $sitemap_name;
 		$this->changefreq = $sitemap_changefreq;
 		$this->priority = $sitemap_priority;
