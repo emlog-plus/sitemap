@@ -65,11 +65,12 @@ class sitemap {
 	}
 	private function generate($url, $lastmod, $changefreq, $priority) {
 		$url = htmlspecialchars($url);
+      	$moble = "pc,mobile";
 		$lastmod = gmdate('c',$lastmod);
-		return "<url>\n<loc>$url</loc>\n<lastmod>$lastmod</lastmod>\n<changefreq>$changefreq</changefreq>\n<priority>$priority</priority>\n</url>\n";
+		return "<url>\n<loc>$url</loc>\n<mobile:mobile type=\"$moble\"/>\n<lastmod>$lastmod</lastmod>\n<changefreq>$changefreq</changefreq>\n<priority>$priority</priority>\n</url>\n";
 	}
 	private function buildXML() {
-		$xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n";
+		$xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:mobile=\"http://www.baidu.com/schemas/sitemap-mobile/1/\">\n";
 		foreach($this->data as $value) {
 			extract($value);
 			$xml .= $this->generate($url, $lastmod, $changefreq, $priority);
